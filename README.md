@@ -21,9 +21,9 @@ docker run -it -p 5000:5000 assign-docker
 Head over to 0.0.0.0:5000.
 
 ## Sample Text File Contents
-Accident
-Fight
-New Song
+Accident </br>
+Fight </br>
+New Song </br>
 
 Must be seperated by new line
 
