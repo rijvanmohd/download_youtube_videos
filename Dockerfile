@@ -18,6 +18,11 @@ ENV DEBIAN_FRONTEND=noninteractive
 # these are 100% optional here
 ENV PORT=5000
 
+# Set up and activate virtual environment
+ENV VIRTUAL_ENV "/venv"
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH "$VIRTUAL_ENV/bin:$PATH"
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
         tzdata \
@@ -34,8 +39,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # install environment dependencies
 RUN pip3 install --upgrade pip 
 
+
+
 # Install project dependencies
 RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
-CMD gunicorn uploads.wsgi:application --bind 0.0.0.0:$PORT
+CMD gunicorn uploads.wsgi:application --timeout 600 --bind 0.0.0.0:$PORT
