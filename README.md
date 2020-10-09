@@ -20,6 +20,13 @@ docker run -it -p 5000:5000 assign-docker
 
 Head over to 0.0.0.0:5000.
 
+## Sample Text File Contents
+Accident
+Fight
+New Song
+
+Must be seperated by new line
+
 # Open Source Repositories Used
 
 https://github.com/HermanFassett/youtube-scrape
