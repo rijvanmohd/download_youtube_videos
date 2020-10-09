@@ -15,7 +15,7 @@ docker build -t assign-docker -f Dockerfile .
 ```
 
 ```bash
-docker run -it -p 5000:5000 simple-django-on-docker
+docker run -it -p 5000:5000 assign-docker
 ```
 
 Head over to 0.0.0.0:5000.
