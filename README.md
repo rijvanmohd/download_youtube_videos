@@ -7,7 +7,7 @@ Also, i will suggest you to use vitual environment to run this project on your s
 ## Running Locally
 
 ```bash
-git clone https://github.com/rijvanmohd/download-youtube-videos.git
+git clone https://github.com/rijvanmohd/download_youtube_videos.git
 ```
 
 ```bash
